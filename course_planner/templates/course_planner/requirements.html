@@ -1,0 +1,25 @@
+{% extends 'course_planner/base.html' %}
+
+{% block content %}
+{% for requirement in requirements %}
+    <h2>{{requirement}}</h2>
+    <table class="requirements-table">
+        <tr>
+            <td>Department</td>
+            <td>Course & Title</td>
+            <td>Academic Year</td>
+            <td>Units</td>
+        </tr>
+        {% for course in requirement.courses.all %}
+        <tr>
+            <td>{{course.department}}</td>
+            <td>{{course.number}} {{course.name}}</td>
+            <td>{{course.quarter}}</td>
+            <td>{{course.units}}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+{% endfor %}
+
+{% endblock %}

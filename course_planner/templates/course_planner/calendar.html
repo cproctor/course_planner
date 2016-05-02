@@ -1,0 +1,38 @@
+{% extends 'course_planner/base.html' %}
+
+{% block content %}
+<div id="tablewrapper">
+<table>
+    <tr>
+        <td rowspan="3"></td>
+        {% for year in years %}
+            <td colspan="{{year.quarters}}">{{year.year}}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+        {% for quarter in quarters %}
+            <td>{{quarter.get_season_display}}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+        {% for quarter in quarters %}
+            <td class="{{quarter.within_unit_cap|yesno:"ok,error"}}">{{quarter.units}} units</td>
+        {% endfor %}
+    </tr>
+    {% for req in requirements %}
+    <tr>
+        <td class="rowlabel {{req.satisfied|yesno:"satisfied,unsatisfied"}}">{{req.source}}: {{req.name}}<br>({{req.progress_display}})</td>
+        {% for quarter in req.quarters %}
+        <td class="courselist">
+            {% for course in quarter.courses %}
+                {{course.department}} {{course.number}}<br>
+                &nbsp;&nbsp;{{course.short_name}}<br>
+            {% endfor %}
+        </td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+</div>
+
+{% endblock %}
