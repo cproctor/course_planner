@@ -1,0 +1,294 @@
+- model: contenttypes.contenttype
+  pk: 1
+  fields: {app_label: admin, model: logentry}
+- model: contenttypes.contenttype
+  pk: 2
+  fields: {app_label: auth, model: permission}
+- model: contenttypes.contenttype
+  pk: 3
+  fields: {app_label: auth, model: group}
+- model: contenttypes.contenttype
+  pk: 4
+  fields: {app_label: auth, model: user}
+- model: contenttypes.contenttype
+  pk: 5
+  fields: {app_label: contenttypes, model: contenttype}
+- model: contenttypes.contenttype
+  pk: 6
+  fields: {app_label: sessions, model: session}
+- model: contenttypes.contenttype
+  pk: 7
+  fields: {app_label: course_planner, model: quarter}
+- model: contenttypes.contenttype
+  pk: 8
+  fields: {app_label: course_planner, model: course}
+- model: contenttypes.contenttype
+  pk: 9
+  fields: {app_label: course_planner, model: requirement}
+- model: contenttypes.contenttype
+  pk: 10
+  fields: {app_label: course_planner, model: requirementsource}
+- model: course_planner.quarter
+  pk: 1
+  fields: {year: 15-16, season: 0, unit_cap: 18}
+- model: course_planner.quarter
+  pk: 2
+  fields: {year: 15-16, season: 1, unit_cap: 18}
+- model: course_planner.quarter
+  pk: 3
+  fields: {year: 15-16, season: 2, unit_cap: 18}
+- model: course_planner.quarter
+  pk: 4
+  fields: {year: 15-16, season: 3, unit_cap: 10}
+- model: course_planner.quarter
+  pk: 5
+  fields: {year: 16-17, season: 0, unit_cap: 10}
+- model: course_planner.quarter
+  pk: 6
+  fields: {year: 16-17, season: 1, unit_cap: 10}
+- model: course_planner.quarter
+  pk: 7
+  fields: {year: 16-17, season: 2, unit_cap: 10}
+- model: course_planner.quarter
+  pk: 8
+  fields: {year: 16-17, season: 3, unit_cap: 10}
+- model: course_planner.quarter
+  pk: 9
+  fields: {year: 17-18, season: 0, unit_cap: 10}
+- model: course_planner.quarter
+  pk: 10
+  fields: {year: 17-18, season: 1, unit_cap: 10}
+- model: course_planner.quarter
+  pk: 11
+  fields: {year: 17-18, season: 2, unit_cap: 10}
+- model: course_planner.quarter
+  pk: 12
+  fields: {year: '- PRIOR', season: 0, unit_cap: 100}
+- model: course_planner.quarter
+  pk: 13
+  fields: {year: 17-18, season: 3, unit_cap: 10}
+- model: course_planner.requirementsource
+  pk: 1
+  fields: {name: Stanford, weight: 0}
+- model: course_planner.requirementsource
+  pk: 2
+  fields: {name: GSE, weight: 1}
+- model: course_planner.requirementsource
+  pk: 3
+  fields: {name: DAPS, weight: 2}
+- model: course_planner.requirementsource
+  pk: 4
+  fields: {name: LSTD, weight: 3}
+- model: course_planner.requirementsource
+  pk: 5
+  fields: {name: CS, weight: 4}
+- model: course_planner.requirement
+  pk: 16
+  fields:
+    name: PhD Units
+    source: 1
+    counting_method: 1
+    count_required: 135
+    courses: []
+- model: course_planner.requirement
+  pk: 18
+  fields:
+    name: Research Methods Core
+    source: 2
+    counting_method: 0
+    count_required: 4
+    courses: []
+- model: course_planner.requirement
+  pk: 19
+  fields:
+    name: Proseminar
+    source: 2
+    counting_method: 0
+    count_required: 3
+    courses: []
+- model: course_planner.requirement
+  pk: 20
+  fields:
+    name: Core
+    source: 3
+    counting_method: 0
+    count_required: 4
+    courses: []
+- model: course_planner.requirement
+  pk: 21
+  fields:
+    name: Proseminar
+    source: 4
+    counting_method: 0
+    count_required: 9
+    courses: []
+- model: course_planner.requirement
+  pk: 22
+  fields:
+    name: Research Methodology
+    source: 4
+    counting_method: 0
+    count_required: 2
+    courses: []
+- model: course_planner.requirement
+  pk: 23
+  fields:
+    name: Design Skills
+    source: 4
+    counting_method: 0
+    count_required: 2
+    courses: []
+- model: course_planner.requirement
+  pk: 24
+  fields:
+    name: Learning
+    source: 4
+    counting_method: 0
+    count_required: 2
+    courses: []
+- model: course_planner.requirement
+  pk: 25
+  fields:
+    name: Perspective on Technology
+    source: 4
+    counting_method: 0
+    count_required: 1
+    courses: []
+- model: course_planner.requirement
+  pk: 26
+  fields:
+    name: Topical Content Area
+    source: 4
+    counting_method: 0
+    count_required: 1
+    courses: []
+- model: course_planner.requirement
+  pk: 27
+  fields:
+    name: Units (Distinct from PhD)
+    source: 5
+    counting_method: 1
+    count_required: 45
+    courses: []
+- model: course_planner.requirement
+  pk: 28
+  fields:
+    name: Foundations
+    source: 5
+    counting_method: 0
+    count_required: 5
+    courses: []
+- model: course_planner.requirement
+  pk: 29
+  fields:
+    name: Significant Implementation
+    source: 5
+    counting_method: 0
+    count_required: 1
+    courses: []
+- model: course_planner.requirement
+  pk: 30
+  fields:
+    name: HCI Depth
+    source: 5
+    counting_method: 1
+    count_required: 27
+    courses: []
+- model: course_planner.requirement
+  pk: 31
+  fields:
+    name: Breadth
+    source: 5
+    counting_method: 0
+    count_required: 3
+    courses: []
+- model: auth.permission
+  pk: 1
+  fields: {name: Can add log entry, content_type: 1, codename: add_logentry}
+- model: auth.permission
+  pk: 2
+  fields: {name: Can change log entry, content_type: 1, codename: change_logentry}
+- model: auth.permission
+  pk: 3
+  fields: {name: Can delete log entry, content_type: 1, codename: delete_logentry}
+- model: auth.permission
+  pk: 4
+  fields: {name: Can add permission, content_type: 2, codename: add_permission}
+- model: auth.permission
+  pk: 5
+  fields: {name: Can change permission, content_type: 2, codename: change_permission}
+- model: auth.permission
+  pk: 6
+  fields: {name: Can delete permission, content_type: 2, codename: delete_permission}
+- model: auth.permission
+  pk: 7
+  fields: {name: Can add group, content_type: 3, codename: add_group}
+- model: auth.permission
+  pk: 8
+  fields: {name: Can change group, content_type: 3, codename: change_group}
+- model: auth.permission
+  pk: 9
+  fields: {name: Can delete group, content_type: 3, codename: delete_group}
+- model: auth.permission
+  pk: 10
+  fields: {name: Can add user, content_type: 4, codename: add_user}
+- model: auth.permission
+  pk: 11
+  fields: {name: Can change user, content_type: 4, codename: change_user}
+- model: auth.permission
+  pk: 12
+  fields: {name: Can delete user, content_type: 4, codename: delete_user}
+- model: auth.permission
+  pk: 13
+  fields: {name: Can add content type, content_type: 5, codename: add_contenttype}
+- model: auth.permission
+  pk: 14
+  fields: {name: Can change content type, content_type: 5, codename: change_contenttype}
+- model: auth.permission
+  pk: 15
+  fields: {name: Can delete content type, content_type: 5, codename: delete_contenttype}
+- model: auth.permission
+  pk: 16
+  fields: {name: Can add session, content_type: 6, codename: add_session}
+- model: auth.permission
+  pk: 17
+  fields: {name: Can change session, content_type: 6, codename: change_session}
+- model: auth.permission
+  pk: 18
+  fields: {name: Can delete session, content_type: 6, codename: delete_session}
+- model: auth.permission
+  pk: 19
+  fields: {name: Can add quarter, content_type: 7, codename: add_quarter}
+- model: auth.permission
+  pk: 20
+  fields: {name: Can change quarter, content_type: 7, codename: change_quarter}
+- model: auth.permission
+  pk: 21
+  fields: {name: Can delete quarter, content_type: 7, codename: delete_quarter}
+- model: auth.permission
+  pk: 22
+  fields: {name: Can add course, content_type: 8, codename: add_course}
+- model: auth.permission
+  pk: 23
+  fields: {name: Can change course, content_type: 8, codename: change_course}
+- model: auth.permission
+  pk: 24
+  fields: {name: Can delete course, content_type: 8, codename: delete_course}
+- model: auth.permission
+  pk: 25
+  fields: {name: Can add requirement, content_type: 9, codename: add_requirement}
+- model: auth.permission
+  pk: 26
+  fields: {name: Can change requirement, content_type: 9, codename: change_requirement}
+- model: auth.permission
+  pk: 27
+  fields: {name: Can delete requirement, content_type: 9, codename: delete_requirement}
+- model: auth.permission
+  pk: 28
+  fields: {name: Can add requirement source, content_type: 10, codename: add_requirementsource}
+- model: auth.permission
+  pk: 29
+  fields: {name: Can change requirement source, content_type: 10, codename: change_requirementsource}
+- model: auth.permission
+  pk: 30
+  fields: {name: Can delete requirement source, content_type: 10, codename: delete_requirementsource}
